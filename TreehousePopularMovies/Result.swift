@@ -9,14 +9,14 @@
 import UIKit
 
 class Results: Codable {
-    let results: [Result]
+    let results: [Movie]
     
-    init(results: [Result]) {
+    init(results: [Movie]) {
         self.results = results
     }
 }
 
-class Result: Codable {
+class Movie: Codable {
     let title: String
     let image: String
     let release_date: String
