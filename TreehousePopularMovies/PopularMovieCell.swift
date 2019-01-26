@@ -1,8 +1,8 @@
 //
-//  PopularMovieCell.swift
+//  PopMovieCell.swift
 //  TreehousePopularMovies
 //
-//  Created by Michael Brown on 1/24/19.
+//  Created by Michael Brown on 1/25/19.
 //  Copyright © 2019 Michael Brown. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import UIKit
 
 class PopularMovieCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var releaseDateLabel: UILabel!
+    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var releaseDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
