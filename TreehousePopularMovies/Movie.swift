@@ -8,37 +8,34 @@
 
 import UIKit
 
+// Results class to use an array property to hold the JSON array data of type Movies
 class Results: Codable {
-    let page: Int
     let results: [Movie]
-    let total_results: Int
-    let total_pages: Int
     
-    init(page: Int, results: [Movie], total_results: Int, total_pages: Int) {
-        self.page = page
+    init(results: [Movie]) {
         self.results = results
-        self.total_results = total_results
-        self.total_pages = total_pages
     }
 
+    // Safe guarding the proper key needed to read the data
     enum CodingKeys: String, CodingKey {
-        case page
         case results = "results"
-        case total_results = "total_results"
-        case total_pages = "total_pages"
     }
 }
 
-// Movie Class fro 
+// Movie Class for matching the properties with the JSON data within the results array
 class Movie: Codable {
     let title: String
     let releaseDate: String
     
-    init(title: String, releaseDate: String) {
+    //Initializing constructor for Movie opject
+    init(title: String, releaseDate: String, posterPath: String) {
         self.title = title
         self.releaseDate = releaseDate
+        
+        
     }
     
+    // Safe guarding the proper keys needed to read data within array
     enum CodingKeys: String, CodingKey {
         case title
         case releaseDate = "release_date"
